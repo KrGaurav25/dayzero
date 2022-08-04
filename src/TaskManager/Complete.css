@@ -1,0 +1,10 @@
+.inn{
+    background-color: bisque;
+    margin: 0%;
+    padding: 0%;
+}
+.out{
+    background-color: aqua;
+    background-size: cover;
+    margin-top: 10px;
+}
