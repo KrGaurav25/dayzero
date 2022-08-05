@@ -5,16 +5,20 @@ class DeletedComponent extends React.Component{
         super(props)
     }
     render(){
-        const {deletedTask,changeCompletion}=this.props
+        const {deletedTask,restore}=this.props
         return(
             <div className="out">
-                <h2>Deleted Tasks</h2>
+                <h2><img src="https://img.icons8.com/external-phatplus-lineal-color-phatplus/2x/external-delete-email-phatplus-lineal-color-phatplus.png"></img>Deleted Tasks</h2>
                 {
                     deletedTask.map((item)=>(
                         <div className="inn">
+                            <div className="contentBlock">
                             <h3>{item.taskname}</h3>
                             <h4>{item.taskdesc}</h4>
-                            <button className='btn btn-primary' onClick={()=>changeCompletion(item.id)}>Restore</button> 
+                            </div>
+                            <div>
+                            <button className='btn btn-primary btns3' onClick={()=>restore(item.id)}>Restore</button> 
+                            </div>
                         </div>
                     ))
                 }
