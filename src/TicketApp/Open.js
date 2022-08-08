@@ -13,6 +13,7 @@ class OpenComponent extends React.Component{
                     openTicket.map((item)=>(
                             <div className="bgcolor">
                             <h3>{item.priority}</h3>
+                            <h4>{item.TimeStamp}</h4>
                             <h4>{item.tDesc}</h4>
                             <button className='btn1 btn-primary' onClick={()=>changeStatus(item.id)}>CLOSE</button>
                             </div>
